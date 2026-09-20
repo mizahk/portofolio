@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-
-/* =========================
-   BODY
-========================= */
-
 html,
 body {
     width: 100%;
@@ -23,22 +18,75 @@ body {
 
 
 /* =========================
-   HOME
+   NAVBAR
 ========================= */
 
-.home {
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    padding: 25px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 10;
+}
+
+nav h2 {
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff9fba;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
     width: 100%;
     height: 100vh;
 
+    display: none;
+}
+
+.page.active {
+    display: flex;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home-page {
+    min-height: 100vh;
+
     background:
-        linear-gradient(
-            rgba(10, 20, 35, .45),
-            rgba(10, 20, 35, .60)
-        ),
+        linear-gradient(rgba(10,20,35,.45), rgba(10,20,35,.55)),
         url("foto-miza.jpeg");
 
     background-size: cover;
     background-position: center 60%;
+    background-repeat: no-repeat;
 
     display: flex;
     align-items: center;
@@ -49,140 +97,117 @@ body {
 
 
 /* =========================
-   NAVBAR
-========================= */
-
-nav {
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-
-    padding: 25px 7%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    z-index: 100;
-}
-
-nav h2 {
-    color: white;
-    font-size: 21px;
-}
-
-.nav-menu {
-    display: flex;
-    align-items: center;
-}
-
-.nav-menu a {
-    color: white;
-
-    text-decoration: none;
-
-    margin-left: 20px;
-
-    font-size: 14px;
-
-    transition: .3s;
-}
-
-.nav-menu a:hover {
-    color: #ff9fba;
-}
-
-
-/* =========================
-   HERO TEXT
+   BAGIAN KIRI HOME
 ========================= */
 
 .hero-text {
-    width: 55%;
-    max-width: 600px;
+    max-width: 550px;
 }
 
-.welcome {
-    letter-spacing: 4px;
-    font-size: 14px;
-}
 
-.hero-text h1 {
-    font-size: 64px;
-    line-height: 1.1;
+/* SELAMAT DATANG */
 
-    margin: 15px 0;
-}
-
-.description {
-    max-width: 500px;
-
-    color: #eee;
-
-    line-height: 1.6;
-
+.hero-text .welcome {
+    letter-spacing: 3px;
     margin-bottom: 25px;
 }
 
-.button {
+
+/* SAYA MIZA */
+
+.hero-text h1 {
+    font-size: 65px;
+    line-height: 1.1;
+
+    margin: 0 0 20px;
+}
+
+
+/* DESKRIPSI */
+
+.hero-text .description {
+    display: block;
+
+    margin-bottom: 25px;
+
+    line-height: 1.6;
+}
+
+
+/* BUTTON */
+
+.hero-text .button {
     display: inline-block;
 
     padding: 12px 20px;
 
-    border: 1px solid white;
-    border-radius: 5px;
-
     color: white;
+
+    border: 1px solid white;
 
     text-decoration: none;
 
-    transition: .3s;
-}
+    border-radius: 5px;
 
-.button:hover {
-    background: white;
-    color: #222;
+    background: transparent;
+
+    cursor: pointer;
 }
 
 
 /* =========================
-   HERO INFO
+   BAGIAN KANAN HOME
 ========================= */
 
 .hero-info {
-    width: 300px;
+    width: 280px;
 }
 
-.info-item {
-    padding: 18px 0;
+
+/* GARIS PEMISAH */
+
+.hero-info .info-item {
+    padding: 20px 0;
 
     border-bottom: 1px solid #ffffff55;
 }
 
-.info-item span {
+
+/* NOMOR 01 / 02 */
+
+.hero-info .info-item span {
     color: #9ec0ff;
+
+    font-size: 14px;
 
     font-weight: bold;
 }
 
-.info-item h3 {
-    margin: 5px 0;
+
+/* JUDUL */
+
+.hero-info .info-item h3 {
+    color: white;
+
+    margin-top: 7px;
 }
 
-.info-item p {
+
+/* DESKRIPSI */
+
+.hero-info .info-item p {
     color: #ddd;
 
     font-size: 14px;
+
+    margin-top: 8px;
 
     line-height: 1.5;
 }
 
 
 /* =========================
-   HERO CONTACT
+   CONTACT HOME
 ========================= */
 
 .hero-contact {
@@ -190,190 +215,188 @@ nav h2 {
 }
 
 .hero-contact h3 {
+    color: white;
+
     margin-bottom: 10px;
 }
 
 .hero-contact a {
+    display: block;
+
     color: #ff9fba;
 
     text-decoration: none;
 
-    margin-right: 10px;
-
     font-size: 14px;
+
+    margin-bottom: 7px;
 }
 
-.hero-contact a:hover {
-    text-decoration: underline;
-}
+/* ==================================================
+   HALAMAN MENU LAIN
+   ABOUT / EDUCATION / SKILLS /
+   PROJECTS / ACTIVITIES / CONTACT
+================================================== */
 
-
-/* =========================
-   POPUP
-========================= */
-
-.popup {
-    position: fixed;
-
-    inset: 0;
-
-    width: 100%;
-    height: 100vh;
-
-    background: rgba(5, 10, 20, .78);
-
-    backdrop-filter: blur(7px);
-
-    display: flex;
-
-    justify-content: center;
+.content-page {
     align-items: center;
+    justify-content: center;
 
-    padding: 70px 30px;
+    padding: 100px 7%;
 
-    opacity: 0;
+    /*
+       BACKGROUND HANYA FOTO
+       TANPA OVERLAY
+    */
 
-    visibility: hidden;
+    background-image: url("foto-miza.jpeg");
 
-    z-index: 50;
-
-    transition:
-        opacity .3s ease,
-        visibility .3s ease;
-}
-
-
-/* SHOW POPUP */
-
-.popup:target {
-    opacity: 1;
-
-    visibility: visible;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
 /* =========================
-   POPUP BOX
+   KOTAK ISI
 ========================= */
 
-.popup-box {
+.content-box {
+    position: relative;
+
     width: 750px;
 
-    max-width: 100%;
+    max-width: 90%;
 
-    background: rgba(255, 255, 255, .97);
+    max-height: 78vh;
 
-    color: #222;
+    /*
+       DARK BLUE
+    */
+
+    background: rgba(7, 26, 47, 0.94);
+
+    color: white;
 
     border-radius: 15px;
 
     padding: 40px;
 
-    position: relative;
-
     box-shadow:
-        0 20px 60px rgba(0, 0, 0, .4);
+        0 20px 60px rgba(0, 0, 0, 0.45);
 
-    transform: translateY(20px);
-
-    transition: .3s;
-}
-
-.popup:target .popup-box {
-    transform: translateY(0);
+    overflow: hidden;
 }
 
 
-/* WIDE POPUP */
+/* KOTAK LEBIH LEBAR */
 
-.popup-box.wide {
+.content-box.wide {
     width: 950px;
 }
 
 
 /* =========================
-   CLOSE
+   NOMOR HALAMAN
 ========================= */
 
-.close {
-    position: absolute;
+.number {
+    display: block;
 
-    right: 22px;
-    top: 12px;
-
-    font-size: 32px;
-
-    color: #777;
-
-    text-decoration: none;
-
-    line-height: 1;
-}
-
-.close:hover {
-    color: #ff6f9b;
-}
-
-
-/* =========================
-   TITLE
-========================= */
-
-.section-number {
-    color: #9b7bff;
+    color: #ff9fba;
 
     font-size: 14px;
 
     font-weight: bold;
+
+    margin-bottom: 8px;
 }
 
-.popup-box h2 {
-    font-size: 35px;
 
-    margin: 5px 0 25px;
+/* =========================
+   JUDUL HALAMAN
+========================= */
+
+.content-box h2 {
+    color: white;
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
 }
 
-.popup-box > p {
-    color: #555;
+.content-box h3 {
+    color: white;
+}
+
+
+/* =========================
+   PARAGRAF
+========================= */
+
+.content-box > p {
+    color: #e5e5e5;
 
     line-height: 1.7;
 
-    margin-bottom: 15px;
+    font-size: 15px;
+
+    margin-bottom: 12px;
+}
+
+.muted {
+    color: #d0d0d0 !important;
+
+    line-height: 1.6;
 }
 
 
 /* =========================
    CARD
+   GARIS PEMISAH
 ========================= */
 
-.simple-card {
-    background: #f7f7f7;
+.card {
+    background: transparent;
 
-    border: 1px solid #e5e5e5;
+    border: none;
 
-    border-radius: 9px;
+    border-bottom: 1px solid #ffffff55;
 
-    padding: 20px;
+    border-radius: 0;
+
+    padding: 18px 0;
+
+    margin: 0;
 }
 
-.simple-card h3 {
-    font-size: 18px;
+.card:last-child {
+    border-bottom: none;
+}
+
+.card h3 {
+    color: white;
 
     margin-bottom: 8px;
 }
 
-.simple-card p {
+.card p {
+    color: #d5d5d5;
+
+    font-size: 14px;
+
     line-height: 1.5;
 }
 
+
+/* =========================
+   PINK
+========================= */
+
 .pink {
-    color: #d86b91 !important;
+    color: #ff9fba !important;
 
-    margin-bottom: 7px;
-}
-
-.muted {
-    color: #555 !important;
+    font-weight: 600;
 }
 
 
@@ -381,24 +404,28 @@ nav h2 {
    SKILLS
 ========================= */
 
-.grid-2 {
+.two-column {
     display: grid;
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 18px;
+    gap: 30px;
 }
 
-.simple-card ul {
+.two-column .card {
+    height: 100%;
+}
+
+.two-column ul {
     padding-left: 20px;
 }
 
-.simple-card li {
-    color: #555;
-
-    margin-bottom: 8px;
+.two-column li {
+    color: #e5e5e5;
 
     font-size: 14px;
+
+    margin-bottom: 8px;
 }
 
 
@@ -406,13 +433,16 @@ nav h2 {
    PROJECTS
 ========================= */
 
-.grid-3 {
+.three-column {
     display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-    gap: 15px;
+    gap: 25px;
+}
+
+.three-column .card {
+    height: 100%;
 }
 
 
@@ -423,165 +453,190 @@ nav h2 {
 .activity-grid {
     display: grid;
 
-    grid-template-columns:
-        repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
 
-    gap: 12px;
+    column-gap: 35px;
 }
 
-.activity-grid .simple-card {
-    padding: 16px;
-}
-
-.activity-grid .simple-card h3 {
-    font-size: 16px;
-}
-
-.activity-grid .simple-card p {
-    font-size: 13px;
+.activity-grid .card {
+    height: 100%;
 }
 
 
 /* =========================
-   CONTACT
+   CLOSE BUTTON
+========================= */
+
+.close {
+    position: absolute;
+
+    top: 18px;
+    right: 22px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #ff9fba;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: white;
+}
+
+
+/* =========================
+   CONTACT PAGE
 ========================= */
 
 .contact-box {
     text-align: center;
 }
 
-.contact-buttons {
+.contact-box .number {
+    text-align: left;
+}
+
+.contact-links {
     display: flex;
 
     justify-content: center;
 
-    gap: 12px;
+    gap: 15px;
 
     margin-top: 25px;
 }
 
-.contact-buttons a {
-    color: #d86b91;
+.contact-links a {
+    color: #ff9fba;
 
     text-decoration: none;
 
-    border: 1px solid #e4a0b7;
+    padding: 12px 18px;
 
-    padding: 11px 18px;
+    border: 1px solid #ffffff55;
 
-    border-radius: 7px;
+    border-radius: 5px;
 
-    transition: .3s;
+    transition: 0.3s;
 }
 
-.contact-buttons a:hover {
-    background: #ff9fba;
-
+.contact-links a:hover {
     color: white;
+
+    border-color: white;
 }
 
 
-/* =========================
+/* ==================================================
    TABLET
-========================= */
+================================================== */
 
-@media (max-width: 1050px) {
-
-    .nav-menu a {
-        margin-left: 10px;
-        font-size: 13px;
-    }
-
-    .hero-text h1 {
-        font-size: 52px;
-    }
-
-    .hero-info {
-        width: 260px;
-    }
-
-    .popup-box.wide {
-        width: 90%;
-    }
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 750px) {
-
-    html,
-    body {
-        overflow: hidden;
-    }
+@media (max-width: 900px) {
 
     nav {
-        padding: 20px 25px;
+        padding: 25px 4%;
     }
 
     nav h2 {
-        font-size: 17px;
+        font-size: 16px;
     }
 
-    .nav-menu {
+    nav a {
+        margin-left: 12px;
+        font-size: 12px;
+    }
+
+    .text h1 {
+        font-size: 48px;
+    }
+
+    .info {
+        width: 250px;
+    }
+
+    .content-box {
+        padding: 30px;
+    }
+
+    .three-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 700px) {
+
+    nav h2 {
         display: none;
     }
 
-    .home {
+    nav {
+        justify-content: center;
+    }
+
+    nav a {
+        margin-left: 8px;
+        font-size: 11px;
+    }
+
+    .home-page {
         flex-direction: column;
 
         align-items: flex-start;
 
         justify-content: flex-end;
 
-        gap: 20px;
+        gap: 30px;
 
-        padding: 100px 25px 35px;
+        padding: 100px 25px 40px;
     }
 
-    .hero-text {
-        width: 100%;
-    }
-
-    .hero-text h1 {
+    .text h1 {
         font-size: 42px;
     }
 
-    .hero-info {
+    .info {
         width: 100%;
     }
 
-    .info-item {
-        padding: 10px 0;
+    .content-page {
+        padding: 90px 20px 30px;
     }
 
-    .info-item p {
-        font-size: 12px;
-    }
-
-    .popup {
-        padding: 60px 15px 20px;
-    }
-
-    .popup-box {
+    .content-box {
         width: 100%;
 
-        padding: 30px 22px;
+        max-width: 100%;
+
+        padding: 28px 22px;
+
+        max-height: 82vh;
     }
 
-    .popup-box h2 {
-        font-size: 28px;
+    .content-box h2 {
+        font-size: 26px;
     }
 
-    .grid-2,
-    .grid-3,
+    .two-column,
     .activity-grid {
         grid-template-columns: 1fr;
     }
 
-    .contact-buttons {
+    .contact-links {
         flex-direction: column;
     }
 }

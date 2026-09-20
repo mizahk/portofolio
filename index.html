@@ -14,22 +14,26 @@
         <h2>Miza Hafizhzah Khoirunnisa</h2>
 
         <div class="nav-menu">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#activities">Activities</a>
-            <a href="#contact">Contact</a>
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('about')">About</a>
+            <a href="#" onclick="showPage('education')">Education</a>
+            <a href="#" onclick="showPage('skills')">Skills</a>
+            <a href="#" onclick="showPage('projects')">Projects</a>
+            <a href="#" onclick="showPage('activities')">Activities</a>
+            <a href="#" onclick="showPage('contact')">Contact</a>
         </div>
     </nav>
 
 
-    <!-- HOME -->
-    <main id="home" class="home">
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="page active home-page">
 
         <div class="hero-text">
-            <p class="welcome">SELAMAT DATANG</p>
+
+            <p class="welcome">
+                SELAMAT DATANG
+            </p>
 
             <h1>
                 Saya Miza,<br>
@@ -41,33 +45,45 @@
                 matematika, data, dan teknologi.
             </p>
 
-            <a href="#about" class="button">
+            <button onclick="showPage('about')" class="button">
                 Discover More →
-            </a>
+            </button>
+
         </div>
 
 
         <div class="hero-info">
 
             <div class="info-item">
+
                 <span>01</span>
+
                 <h3>Tentang Saya</h3>
+
                 <p>
-                    Mahasiswa Matematika Universitas Airlangga
-                    yang tertarik pada data dan teknologi.
+                    Mahasiswa Matematika di Universitas Airlangga
+                    yang tertarik pada pengolahan data dan teknologi.
                 </p>
+
             </div>
+
 
             <div class="info-item">
+
                 <span>02</span>
+
                 <h3>Kemampuan</h3>
+
                 <p>
                     Microsoft Office, Google Workspace,
-                    dan pengolahan data dasar.
+                    pengolahan data, dan analisis data dasar.
                 </p>
+
             </div>
 
+
             <div class="hero-contact">
+
                 <h3>Let's Connect</h3>
 
                 <a href="mailto:mizahafizhzahkhoirunnisaa@gmail.com">
@@ -84,23 +100,32 @@
                 >
                     LinkedIn
                 </a>
+
             </div>
 
         </div>
 
-    </main>
+    </section>
 
 
-    <!-- ABOUT -->
-    <section id="about" class="popup">
 
-        <div class="popup-box">
+    <!-- ================= ABOUT ================= -->
 
-            <a href="#home" class="close">×</a>
+    <section id="about" class="page content-page">
 
-            <span class="section-number">01</span>
+        <div class="content-box">
 
-            <h2>Tentang Saya</h2>
+            <button class="close" onclick="showPage('home')">
+                ×
+            </button>
+
+            <span class="number">
+                01
+            </span>
+
+            <h2>
+                Tentang Saya
+            </h2>
 
             <p>
                 Saya merupakan mahasiswa Matematika Universitas Airlangga
@@ -109,13 +134,15 @@
             </p>
 
             <p>
-                Selama perkuliahan, saya mempelajari berbagai materi
-                matematika, statistika, analisis, dan metode numerik.
+                Selama perkuliahan, saya mempelajari berbagai materi yang
+                berkaitan dengan matematika, statistika, analisis,
+                dan metode numerik.
             </p>
 
             <p>
-                Saya juga aktif dalam kegiatan organisasi dan kepanitiaan
-                yang membantu mengembangkan kemampuan komunikasi, kerja sama,
+                Selain kegiatan akademik, saya juga aktif dalam berbagai
+                kegiatan organisasi dan kepanitiaan yang membantu
+                mengembangkan kemampuan komunikasi, kerja sama,
                 disiplin, dan tanggung jawab.
             </p>
 
@@ -124,20 +151,31 @@
     </section>
 
 
-    <!-- EDUCATION -->
-    <section id="education" class="popup">
 
-        <div class="popup-box">
+    <!-- ================= EDUCATION ================= -->
 
-            <a href="#home" class="close">×</a>
+    <section id="education" class="page content-page">
 
-            <span class="section-number">02</span>
+        <div class="content-box">
 
-            <h2>Pendidikan</h2>
+            <button class="close" onclick="showPage('home')">
+                ×
+            </button>
 
-            <div class="simple-card">
+            <span class="number">
+                02
+            </span>
 
-                <h3>Universitas Airlangga</h3>
+            <h2>
+                Pendidikan
+            </h2>
+
+
+            <div class="card">
+
+                <h3>
+                    Universitas Airlangga
+                </h3>
 
                 <p class="pink">
                     S1 Matematika
@@ -148,8 +186,8 @@
                 </p>
 
                 <p class="muted">
-                    Mempelajari matematika, statistika, analisis,
-                    metode numerik, serta penerapannya dalam
+                    Mempelajari berbagai bidang matematika, statistika,
+                    analisis, metode numerik, serta penerapannya dalam
                     penyelesaian masalah.
                 </p>
 
@@ -160,21 +198,33 @@
     </section>
 
 
-    <!-- SKILLS -->
-    <section id="skills" class="popup">
 
-        <div class="popup-box">
+    <!-- ================= SKILLS ================= -->
 
-            <a href="#home" class="close">×</a>
+    <section id="skills" class="page content-page">
 
-            <span class="section-number">03</span>
+        <div class="content-box">
 
-            <h2>Kemampuan</h2>
+            <button class="close" onclick="showPage('home')">
+                ×
+            </button>
 
-            <div class="grid-2">
+            <span class="number">
+                03
+            </span>
 
-                <div class="simple-card">
-                    <h3>Hard Skills</h3>
+            <h2>
+                Kemampuan
+            </h2>
+
+
+            <div class="two-column">
+
+                <div class="card">
+
+                    <h3>
+                        Hard Skills
+                    </h3>
 
                     <ul>
                         <li>Microsoft Excel — Basic</li>
@@ -185,11 +235,15 @@
                         <li>Pengolahan Data — Basic</li>
                         <li>Analisis Data — Basic</li>
                     </ul>
+
                 </div>
 
 
-                <div class="simple-card">
-                    <h3>Soft Skills</h3>
+                <div class="card">
+
+                    <h3>
+                        Soft Skills
+                    </h3>
 
                     <ul>
                         <li>Communication</li>
@@ -198,6 +252,7 @@
                         <li>Responsibility</li>
                         <li>Time Management</li>
                     </ul>
+
                 </div>
 
             </div>
@@ -207,50 +262,73 @@
     </section>
 
 
-    <!-- PROJECTS -->
-    <section id="projects" class="popup">
 
-        <div class="popup-box wide">
+    <!-- ================= PROJECTS ================= -->
 
-            <a href="#home" class="close">×</a>
+    <section id="projects" class="page content-page">
 
-            <span class="section-number">04</span>
+        <div class="content-box wide">
 
-            <h2>Academic Projects</h2>
+            <button class="close" onclick="showPage('home')">
+                ×
+            </button>
 
-            <div class="grid-3">
+            <span class="number">
+                04
+            </span>
 
-                <div class="simple-card">
-                    <h3>Critical Path Method</h3>
+            <h2>
+                Academic Projects
+            </h2>
+
+
+            <div class="three-column">
+
+                <div class="card">
+
+                    <h3>
+                        Critical Path Method
+                    </h3>
 
                     <p class="pink">
                         HIMATIKA's Balance 2025
                     </p>
 
                     <p class="muted">
-                        Membuat program Borland C++ untuk menganalisis
-                        aktivitas proyek menggunakan metode CPM.
+                        Membuat program menggunakan Borland C++
+                        untuk menganalisis aktivitas proyek
+                        menggunakan metode CPM.
                     </p>
+
                 </div>
 
 
-                <div class="simple-card">
-                    <h3>Metode Numerik</h3>
+                <div class="card">
+
+                    <h3>
+                        Metode Numerik
+                    </h3>
 
                     <p class="muted">
-                        Mengerjakan permasalahan matematika menggunakan
-                        metode numerik, termasuk metode Runge-Kutta.
+                        Mengerjakan permasalahan matematika
+                        menggunakan metode numerik, termasuk
+                        metode Runge-Kutta.
                     </p>
+
                 </div>
 
 
-                <div class="simple-card">
-                    <h3>Statistika & Analisis Data</h3>
+                <div class="card">
+
+                    <h3>
+                        Statistika & Analisis Data
+                    </h3>
 
                     <p class="muted">
                         Mengerjakan tugas perkuliahan yang berkaitan
                         dengan pengolahan dan analisis data.
                     </p>
+
                 </div>
 
             </div>
@@ -260,76 +338,116 @@
     </section>
 
 
-    <!-- ACTIVITIES -->
-    <section id="activities" class="popup">
 
-        <div class="popup-box wide">
+    <!-- ================= ACTIVITIES ================= -->
 
-            <a href="#home" class="close">×</a>
+    <section id="activities" class="page content-page">
 
-            <span class="section-number">05</span>
+        <div class="content-box wide">
 
-            <h2>Organization & Activities</h2>
+            <button class="close" onclick="showPage('home')">
+                ×
+            </button>
+
+            <span class="number">
+                05
+            </span>
+
+            <h2>
+                Organization & Activities
+            </h2>
+
 
             <div class="activity-grid">
 
-                <div class="simple-card">
-                    <h3>KOMBAT – HIMATIKA</h3>
+                <div class="card">
+
+                    <h3>
+                        KOMBAT – HIMATIKA
+                    </h3>
+
                     <p class="pink">
                         Anggota Divisi Humas · Mar 2026 – Sekarang
                     </p>
+
                     <p class="muted">
                         Berpartisipasi dalam kegiatan seni dan olahraga
                         serta mendukung kebersamaan mahasiswa.
                     </p>
+
                 </div>
 
 
-                <div class="simple-card">
-                    <h3>HIMATIKA's BALANCE</h3>
+                <div class="card">
+
+                    <h3>
+                        HIMATIKA's BALANCE
+                    </h3>
+
                     <p class="pink">
                         Anggota Divisi KAMJINKES
                     </p>
+
                     <p class="muted">
-                        Mendukung keamanan, kesehatan, dan koordinasi
-                        selama kegiatan.
+                        Mendukung keamanan, kesehatan,
+                        dan koordinasi selama kegiatan.
                     </p>
+
                 </div>
 
 
-                <div class="simple-card">
-                    <h3>GATHERING MABA</h3>
+                <div class="card">
+
+                    <h3>
+                        GATHERING MABA
+                    </h3>
+
                     <p class="pink">
                         Anggota Divisi Acara
                     </p>
+
                     <p class="muted">
                         Berpartisipasi dalam kegiatan kebersamaan
                         dan adaptasi mahasiswa baru.
                     </p>
+
                 </div>
 
 
-                <div class="simple-card">
-                    <h3>PENDEKAR FST</h3>
+                <div class="card">
+
+                    <h3>
+                        PENDEKAR FST
+                    </h3>
+
                     <p class="pink">
                         Pendamping Kelompok
                     </p>
+
                     <p class="muted">
                         Mendampingi peserta dan membantu memastikan
                         kegiatan berjalan sesuai aturan.
                     </p>
+
                 </div>
 
 
-                <div class="simple-card">
-                    <h3>PASKIBRA</h3>
+                <div class="card">
+
+                    <h3>
+                        PASKIBRA
+                    </h3>
+
                     <p class="pink">
                         Ton 1 · Jul 2025 – Aug 2025
                     </p>
+
                     <p class="muted">
-                        Berpartisipasi dalam kegiatan PASKIBRA yang
-                        melatih disiplin, tanggung jawab, dan kerja sama.
+                        Berpartisipasi dalam kegiatan PASKIBRA
+                        yang melatih disiplin, tanggung jawab,
+                        dan kerja sama.
                     </p>
+
                 </div>
 
             </div>
@@ -339,22 +457,31 @@
     </section>
 
 
-    <!-- CONTACT -->
-    <section id="contact" class="popup">
 
-        <div class="popup-box contact-box">
+    <!-- ================= CONTACT ================= -->
 
-            <a href="#home" class="close">×</a>
+    <section id="contact" class="page content-page">
 
-            <span class="section-number">06</span>
+        <div class="content-box contact-box">
 
-            <h2>Let's Connect</h2>
+            <button class="close" onclick="showPage('home')">
+                ×
+            </button>
+
+            <span class="number">
+                06
+            </span>
+
+            <h2>
+                Let's Connect
+            </h2>
 
             <p class="muted">
                 Feel free to connect with me.
             </p>
 
-            <div class="contact-buttons">
+
+            <div class="contact-links">
 
                 <a href="mailto:mizahafizhzahkhoirunnisaa@gmail.com">
                     📧 Email
@@ -376,6 +503,9 @@
         </div>
 
     </section>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
