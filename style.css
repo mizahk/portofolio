@@ -1,6 +1,6 @@
-/* ========================================
+/* =========================================
    RESET
-======================================== */
+========================================= */
 
 * {
     margin: 0;
@@ -18,13 +18,12 @@ body {
     font-family: Arial, sans-serif;
     color: white;
     overflow: hidden;
-    background: #071a2f;
 }
 
 
-/* ========================================
+/* =========================================
    NAVBAR
-======================================== */
+========================================= */
 
 nav {
     position: fixed;
@@ -32,17 +31,17 @@ nav {
     left: 0;
 
     width: 100%;
+
     padding: 25px 7%;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     z-index: 100;
 }
 
 nav h2 {
-    color: white;
     font-size: 20px;
     font-weight: 600;
 }
@@ -68,15 +67,41 @@ nav h2 {
 }
 
 
-/* ========================================
-   SEMUA PAGE
-======================================== */
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.menu-button {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
 
 .page {
     position: fixed;
 
-    top: 0;
-    left: 0;
+    inset: 0;
 
     width: 100%;
     height: 100vh;
@@ -91,12 +116,11 @@ nav h2 {
 }
 
 
-/* ========================================
+/* =========================================
    HOME
-======================================== */
+========================================= */
 
 .home-page {
-    min-height: 100vh;
 
     background:
         linear-gradient(
@@ -109,8 +133,6 @@ nav h2 {
     background-position: center 60%;
     background-repeat: no-repeat;
 
-    display: flex;
-
     align-items: center;
     justify-content: space-between;
 
@@ -118,18 +140,16 @@ nav h2 {
 }
 
 
-/* ========================================
-   HOME - TEXT
-======================================== */
+/* =========================================
+   HOME TEXT
+========================================= */
 
 .hero-text {
     width: 55%;
     max-width: 550px;
 }
 
-.hero-text .welcome {
-    font-size: 14px;
-
+.welcome {
     letter-spacing: 3px;
 
     margin-bottom: 28px;
@@ -141,15 +161,9 @@ nav h2 {
     line-height: 1.08;
 
     margin-bottom: 22px;
-
-    font-weight: 600;
 }
 
-.hero-text .description {
-    display: block;
-
-    max-width: 500px;
-
+.description {
     font-size: 15px;
 
     line-height: 1.6;
@@ -160,11 +174,11 @@ nav h2 {
 }
 
 
-/* ========================================
+/* =========================================
    BUTTON
-======================================== */
+========================================= */
 
-.hero-text .button {
+.button {
     display: inline-block;
 
     padding: 12px 20px;
@@ -177,86 +191,71 @@ nav h2 {
 
     border-radius: 5px;
 
-    text-decoration: none;
+    cursor: pointer;
 
     font-size: 14px;
-
-    cursor: pointer;
 
     transition: 0.3s;
 }
 
-.hero-text .button:hover {
+.button:hover {
     background: white;
     color: #071a2f;
 }
 
 
-/* ========================================
-   HOME - RIGHT SIDE
-======================================== */
+/* =========================================
+   HOME RIGHT SIDE
+========================================= */
 
 .hero-info {
     width: 280px;
 }
 
-
-/* ========================================
-   HOME - ABOUT & SKILLS
-======================================== */
-
-.hero-info .info-item {
+.info-item {
     padding: 20px 0;
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    border-bottom: 1px solid rgba(255,255,255,.35);
 }
 
-.hero-info .info-item:first-child {
+.info-item:first-child {
     padding-top: 0;
 }
 
-.hero-info .info-item span {
-    display: block;
-
+.info-item span {
     color: #9ec0ff;
 
     font-size: 14px;
 
     font-weight: bold;
-
-    margin-bottom: 7px;
 }
 
-.hero-info .info-item h3 {
-    color: white;
-
+.info-item h3 {
     font-size: 17px;
 
-    font-weight: 500;
-
-    margin-bottom: 8px;
+    margin-top: 7px;
 }
 
-.hero-info .info-item p {
-    color: #dddddd;
+.info-item p {
+    color: #ddd;
 
     font-size: 13px;
 
     line-height: 1.5;
+
+    margin-top: 8px;
 }
 
 
-/* ========================================
-   HOME - CONTACT
-======================================== */
+/* =========================================
+   HOME CONTACT
+========================================= */
 
 .hero-contact {
     padding-top: 20px;
 }
 
 .hero-contact h3 {
-    color: white;
-
     font-size: 16px;
 
     margin-bottom: 10px;
@@ -272,21 +271,14 @@ nav h2 {
     font-size: 13px;
 
     margin-bottom: 7px;
-
-    transition: 0.3s;
-}
-
-.hero-contact a:hover {
-    color: white;
 }
 
 
-/* ========================================
-   CONTENT PAGES
-======================================== */
+/* =========================================
+   OTHER PAGES
+========================================= */
 
 .content-page {
-    min-height: 100vh;
 
     background-image: url("foto-miza.jpeg");
 
@@ -301,21 +293,22 @@ nav h2 {
 }
 
 
-/* ========================================
+/* =========================================
    CONTENT BOX
-======================================== */
+========================================= */
 
 .content-box {
+
     position: relative;
 
     width: 850px;
     max-width: 100%;
 
-    max-height: 80vh;
+    max-height: 82vh;
 
     padding: 45px;
 
-    background: rgba(7, 26, 47, 0.94);
+    background: rgba(7,26,47,.94);
 
     border-radius: 10px;
 
@@ -327,11 +320,12 @@ nav h2 {
 }
 
 
-/* ========================================
-   CLOSE BUTTON
-======================================== */
+/* =========================================
+   CLOSE
+========================================= */
 
 .close {
+
     position: absolute;
 
     top: 18px;
@@ -345,10 +339,6 @@ nav h2 {
     font-size: 30px;
 
     cursor: pointer;
-
-    line-height: 1;
-
-    transition: 0.3s;
 }
 
 .close:hover {
@@ -356,9 +346,9 @@ nav h2 {
 }
 
 
-/* ========================================
-   CONTENT TITLE
-======================================== */
+/* =========================================
+   TITLES
+========================================= */
 
 .number {
     display: block;
@@ -379,7 +369,7 @@ nav h2 {
 }
 
 .content-box > p {
-    color: #dddddd;
+    color: #ddd;
 
     font-size: 14px;
 
@@ -389,23 +379,19 @@ nav h2 {
 }
 
 
-/* ========================================
-   CARDS
-======================================== */
+/* =========================================
+   CARD
+========================================= */
 
 .card {
     padding: 20px;
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-}
+    border: 1px solid rgba(255,255,255,.2);
 
-.card:last-child {
-    border-bottom: none;
+    border-radius: 7px;
 }
 
 .card h3 {
-    color: white;
-
     font-size: 18px;
 
     margin-bottom: 8px;
@@ -422,34 +408,30 @@ nav h2 {
 }
 
 .muted {
-    color: #cccccc !important;
+    color: #ccc !important;
 }
 
 
-/* ========================================
+/* =========================================
    TWO COLUMN
-======================================== */
+========================================= */
 
 .two-column {
+
     display: grid;
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 30px;
-}
-
-.two-column .card {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-
-    border-radius: 7px;
+    gap: 20px;
 }
 
 
-/* ========================================
+/* =========================================
    THREE COLUMN
-======================================== */
+========================================= */
 
 .three-column {
+
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
@@ -457,43 +439,13 @@ nav h2 {
     gap: 20px;
 }
 
-.three-column .card {
-    border: 1px solid rgba(255, 255, 255, 0.2);
 
-    border-radius: 7px;
-}
-
-
-/* ========================================
-   SKILLS LIST
-======================================== */
-
-.card ul {
-    list-style: none;
-
-    margin-top: 10px;
-}
-
-.card li {
-    color: #dddddd;
-
-    font-size: 14px;
-
-    padding: 8px 0;
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.card li:last-child {
-    border-bottom: none;
-}
-
-
-/* ========================================
-   ACTIVITIES
-======================================== */
+/* =========================================
+   ACTIVITY
+========================================= */
 
 .activity-grid {
+
     display: grid;
 
     grid-template-columns: 1fr 1fr;
@@ -501,16 +453,30 @@ nav h2 {
     gap: 20px;
 }
 
-.activity-grid .card {
-    border: 1px solid rgba(255, 255, 255, 0.2);
 
-    border-radius: 7px;
+/* =========================================
+   LIST
+========================================= */
+
+.card ul {
+    list-style: none;
+}
+
+.card li {
+
+    color: #ddd;
+
+    font-size: 14px;
+
+    padding: 8px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.12);
 }
 
 
-/* ========================================
-   CONTACT PAGE
-======================================== */
+/* =========================================
+   CONTACT
+========================================= */
 
 .contact-box {
     max-width: 650px;
@@ -521,9 +487,8 @@ nav h2 {
 }
 
 .contact-links a {
-    display: block;
 
-    width: fit-content;
+    display: block;
 
     color: #ff9fba;
 
@@ -532,43 +497,29 @@ nav h2 {
     font-size: 15px;
 
     margin-bottom: 12px;
-
-    transition: 0.3s;
-}
-
-.contact-links a:hover {
-    color: white;
 }
 
 
-/* ========================================
-   SCROLLBAR CONTENT
-======================================== */
+/* =========================================
+   SCROLLBAR
+========================================= */
 
 .content-box::-webkit-scrollbar {
     width: 5px;
 }
 
-.content-box::-webkit-scrollbar-track {
-    background: transparent;
-}
-
 .content-box::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255,255,255,.3);
 
     border-radius: 10px;
 }
 
 
-/* ========================================
+/* =========================================
    TABLET
-======================================== */
+========================================= */
 
 @media (max-width: 900px) {
-
-    .home-page {
-        padding: 100px 5%;
-    }
 
     .hero-text h1 {
         font-size: 52px;
@@ -578,135 +529,240 @@ nav h2 {
         width: 240px;
     }
 
-    .content-page {
-        padding: 90px 5% 30px;
-    }
-
-    .content-box {
-        padding: 35px;
-    }
-
-    .three-column {
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 
-/* ================================
-   MOBILE PHONE
-================================ */
+/* =========================================
+   MOBILE
+========================================= */
 
-@media screen and (max-width: 900px) {
+@media (max-width: 700px) {
 
     /* NAVBAR */
+
     nav {
-        padding: 18px 20px !important;
+        padding: 18px 20px;
     }
 
     nav h2 {
-        font-size: 15px !important;
-        max-width: 180px;
+        font-size: 15px;
+
+        max-width: 190px;
+
+        line-height: 1.3;
     }
 
-    nav .nav-menu {
-        display: none !important;
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+
+    /* MOBILE MENU */
+
+    .mobile-menu {
+
+        position: fixed;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100vh;
+
+        background: rgba(7,26,47,.98);
+
+        z-index: 200;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 22px;
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+
+    .mobile-menu a {
+
+        color: white;
+
+        text-decoration: none;
+
+        font-size: 21px;
+
+        transition: .3s;
+    }
+
+    .mobile-menu a:hover {
+        color: #ff9fba;
+    }
+
+    .menu-close {
+
+        position: absolute;
+
+        top: 20px;
+        right: 25px;
+
+        background: none;
+        border: none;
+
+        color: white;
+
+        font-size: 35px;
+
+        cursor: pointer;
     }
 
 
     /* HOME */
+
     .home-page {
-        height: 100vh !important;
-        min-height: 100vh !important;
 
-        padding: 100px 25px 30px !important;
+        padding: 100px 25px 30px;
 
-        display: flex !important;
-        flex-direction: column !important;
+        align-items: flex-start;
 
-        align-items: flex-start !important;
-        justify-content: center !important;
+        justify-content: center;
 
-        gap: 30px !important;
-
-        overflow: hidden !important;
+        overflow: hidden;
     }
 
 
-    /* TEKS UTAMA */
+    /* HOME TEXT */
+
     .hero-text {
-        width: 100% !important;
-        max-width: 100% !important;
+
+        width: 100%;
+
+        max-width: 100%;
     }
 
-    .hero-text .welcome {
-        font-size: 12px !important;
-        letter-spacing: 2px !important;
-        margin-bottom: 15px !important;
+    .welcome {
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 20px;
     }
 
     .hero-text h1 {
-        font-size: 40px !important;
-        line-height: 1.1 !important;
 
-        margin: 0 0 18px 0 !important;
+        font-size: 39px;
 
-        max-width: 100% !important;
+        line-height: 1.1;
+
+        margin-bottom: 18px;
     }
 
-    .hero-text .description {
-        font-size: 14px !important;
-        line-height: 1.5 !important;
+    .description {
 
-        max-width: 350px !important;
+        font-size: 14px;
 
-        margin-bottom: 20px !important;
+        line-height: 1.6;
+
+        margin-bottom: 20px;
     }
 
-    .hero-text .button {
-        font-size: 13px !important;
-        padding: 10px 16px !important;
+    .button {
+
+        font-size: 13px;
+
+        padding: 11px 17px;
     }
 
 
-    /* BAGIAN KANAN */
+    /* SEMBUNYIKAN INFO KANAN DI HOME HP */
+
     .hero-info {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .hero-info .info-item {
-        padding: 12px 0 !important;
-
-        border-bottom: 1px solid rgba(255,255,255,.35) !important;
-    }
-
-    .hero-info .info-item span {
-        font-size: 12px !important;
-    }
-
-    .hero-info .info-item h3 {
-        font-size: 16px !important;
-        margin: 5px 0 !important;
-    }
-
-    .hero-info .info-item p {
-        font-size: 13px !important;
-        line-height: 1.5 !important;
-
-        margin: 0 !important;
+        display: none;
     }
 
 
-    /* CONTACT */
-    .hero-contact {
-        padding-top: 15px !important;
+    /* CONTENT */
+
+    .content-page {
+
+        padding: 80px 18px 25px;
+
+        overflow: hidden;
     }
 
-    .hero-contact h3 {
-        font-size: 16px !important;
+    .content-box {
+
+        width: 100%;
+
+        max-height: 82vh;
+
+        padding: 30px 20px;
+
+        overflow-y: auto;
     }
 
-    .hero-contact a {
-        font-size: 13px !important;
+    .content-box.wide {
+        width: 100%;
     }
+
+    .content-box h2 {
+
+        font-size: 28px;
+
+        margin-bottom: 20px;
+    }
+
+    .content-box > p {
+
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    /* CLOSE */
+
+    .close {
+
+        top: 15px;
+
+        right: 18px;
+
+        font-size: 28px;
+    }
+
+
+    /* ONE COLUMN */
+
+    .two-column,
+    .three-column,
+    .activity-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .card {
+
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p,
+    .card li {
+        font-size: 12px;
+    }
+
 }
