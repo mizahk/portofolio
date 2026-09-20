@@ -4,60 +4,36 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+
+/* =========================
+   BODY
+========================= */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 body {
     font-family: Arial, sans-serif;
-    color: #222;
-    background: #f8f8f8;
+    color: white;
 }
 
 
 /* =========================
-   NAVBAR
+   HOME
 ========================= */
 
-nav {
-    position: absolute;
-    top: 0;
+.home {
     width: 100%;
-    padding: 25px 7%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    z-index: 2;
-}
-
-nav h2 {
-    color: white;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-nav a:hover {
-    color: #ff9fba;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    min-height: 100vh;
+    height: 100vh;
 
     background:
         linear-gradient(
-            rgba(10,20,35,.45),
-            rgba(10,20,35,.55)
+            rgba(10, 20, 35, .45),
+            rgba(10, 20, 35, .60)
         ),
         url("foto-miza.jpeg");
 
@@ -69,8 +45,54 @@ nav a:hover {
     justify-content: space-between;
 
     padding: 100px 7%;
+}
 
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 25px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 100;
+}
+
+nav h2 {
     color: white;
+    font-size: 21px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: white;
+
+    text-decoration: none;
+
+    margin-left: 20px;
+
+    font-size: 14px;
+
+    transition: .3s;
+}
+
+.nav-menu a:hover {
+    color: #ff9fba;
 }
 
 
@@ -78,23 +100,31 @@ nav a:hover {
    HERO TEXT
 ========================= */
 
-.text {
-    max-width: 550px;
+.hero-text {
+    width: 55%;
+    max-width: 600px;
 }
 
-.text p {
-    letter-spacing: 3px;
+.welcome {
+    letter-spacing: 4px;
+    font-size: 14px;
 }
 
-.text h1 {
-    font-size: 65px;
+.hero-text h1 {
+    font-size: 64px;
+    line-height: 1.1;
+
     margin: 15px 0;
 }
 
-.text span {
-    display: block;
+.description {
+    max-width: 500px;
+
+    color: #eee;
+
+    line-height: 1.6;
+
     margin-bottom: 25px;
-    line-height: 1.5;
 }
 
 .button {
@@ -102,11 +132,12 @@ nav a:hover {
 
     padding: 12px 20px;
 
-    color: white;
     border: 1px solid white;
+    border-radius: 5px;
+
+    color: white;
 
     text-decoration: none;
-    border-radius: 5px;
 
     transition: .3s;
 }
@@ -121,89 +152,193 @@ nav a:hover {
    HERO INFO
 ========================= */
 
-.info {
+.hero-info {
     width: 300px;
 }
 
-.info > div {
-    padding: 20px 0;
+.info-item {
+    padding: 18px 0;
+
     border-bottom: 1px solid #ffffff55;
 }
 
-.info b {
+.info-item span {
     color: #9ec0ff;
+
+    font-weight: bold;
 }
 
-.info h3 {
+.info-item h3 {
     margin: 5px 0;
 }
 
-.info p {
+.info-item p {
     color: #ddd;
+
     font-size: 14px;
+
     line-height: 1.5;
-    margin-top: 8px;
 }
 
 
-/* CONTACT DI HERO */
+/* =========================
+   HERO CONTACT
+========================= */
 
-.contact h2 {
+.hero-contact {
+    padding-top: 20px;
+}
+
+.hero-contact h3 {
     margin-bottom: 10px;
 }
 
-.contact a {
+.hero-contact a {
     color: #ff9fba;
+
     text-decoration: none;
-    display: inline-block;
+
     margin-right: 10px;
+
+    font-size: 14px;
 }
 
-.contact a:hover {
+.hero-contact a:hover {
     text-decoration: underline;
 }
 
 
 /* =========================
-   GENERAL SECTION
+   POPUP
 ========================= */
 
-.section {
-    padding: 90px 10%;
-    background: #fff;
+.popup {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(5, 10, 20, .78);
+
+    backdrop-filter: blur(7px);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 70px 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    z-index: 50;
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease;
 }
 
-.section:nth-child(even) {
-    background: #f7f7f7;
-}
 
-.section-title {
-    margin-bottom: 40px;
-}
+/* SHOW POPUP */
 
-.section-title span {
-    color: #9b7bff;
-    font-weight: bold;
-}
+.popup:target {
+    opacity: 1;
 
-.section-title h2 {
-    font-size: 38px;
-    margin-top: 5px;
+    visibility: visible;
 }
 
 
 /* =========================
-   ABOUT
+   POPUP BOX
 ========================= */
 
-.section-content {
-    max-width: 850px;
+.popup-box {
+    width: 750px;
+
+    max-width: 100%;
+
+    background: rgba(255, 255, 255, .97);
+
+    color: #222;
+
+    border-radius: 15px;
+
+    padding: 40px;
+
+    position: relative;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, .4);
+
+    transform: translateY(20px);
+
+    transition: .3s;
 }
 
-.section-content p {
-    line-height: 1.8;
-    margin-bottom: 18px;
+.popup:target .popup-box {
+    transform: translateY(0);
+}
+
+
+/* WIDE POPUP */
+
+.popup-box.wide {
+    width: 950px;
+}
+
+
+/* =========================
+   CLOSE
+========================= */
+
+.close {
+    position: absolute;
+
+    right: 22px;
+    top: 12px;
+
+    font-size: 32px;
+
+    color: #777;
+
+    text-decoration: none;
+
+    line-height: 1;
+}
+
+.close:hover {
+    color: #ff6f9b;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.section-number {
+    color: #9b7bff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.popup-box h2 {
+    font-size: 35px;
+
+    margin: 5px 0 25px;
+}
+
+.popup-box > p {
     color: #555;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
 }
 
 
@@ -211,37 +346,34 @@ nav a:hover {
    CARD
 ========================= */
 
-.card {
-    background: white;
-    padding: 30px;
+.simple-card {
+    background: #f7f7f7;
 
     border: 1px solid #e5e5e5;
-    border-radius: 10px;
 
-    margin-bottom: 20px;
+    border-radius: 9px;
 
-    transition: .3s;
+    padding: 20px;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+.simple-card h3 {
+    font-size: 18px;
+
+    margin-bottom: 8px;
 }
 
-.card h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
+.simple-card p {
+    line-height: 1.5;
 }
 
-.card .subtitle {
-    color: #9b7bff;
-    margin-bottom: 12px;
-    font-weight: 500;
+.pink {
+    color: #d86b91 !important;
+
+    margin-bottom: 7px;
 }
 
-.card .description {
-    color: #555;
-    line-height: 1.6;
+.muted {
+    color: #555 !important;
 }
 
 
@@ -249,19 +381,24 @@ nav a:hover {
    SKILLS
 ========================= */
 
-.skills-container {
+.grid-2 {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+
+    gap: 18px;
 }
 
-.card ul {
+.simple-card ul {
     padding-left: 20px;
 }
 
-.card li {
-    margin-bottom: 10px;
+.simple-card li {
     color: #555;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
 }
 
 
@@ -269,15 +406,13 @@ nav a:hover {
    PROJECTS
 ========================= */
 
-.projects-container {
+.grid-3 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
 
-.project-card p {
-    color: #555;
-    line-height: 1.6;
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
 }
 
 
@@ -285,15 +420,25 @@ nav a:hover {
    ACTIVITIES
 ========================= */
 
-.activities-container {
+.activity-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
 }
 
-.activities-container .card p:last-child {
-    color: #555;
-    line-height: 1.6;
+.activity-grid .simple-card {
+    padding: 16px;
+}
+
+.activity-grid .simple-card h3 {
+    font-size: 16px;
+}
+
+.activity-grid .simple-card p {
+    font-size: 13px;
 }
 
 
@@ -301,38 +446,63 @@ nav a:hover {
    CONTACT
 ========================= */
 
-.contact-section {
+.contact-box {
     text-align: center;
 }
 
-.contact-list {
+.contact-buttons {
     display: flex;
+
     justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 25px;
 }
 
-.contact-list a {
+.contact-buttons a {
     color: #d86b91;
+
     text-decoration: none;
-    font-size: 18px;
+
+    border: 1px solid #e4a0b7;
+
+    padding: 11px 18px;
+
+    border-radius: 7px;
+
+    transition: .3s;
 }
 
-.contact-list a:hover {
-    text-decoration: underline;
+.contact-buttons a:hover {
+    background: #ff9fba;
+
+    color: white;
 }
 
 
 /* =========================
-   FOOTER
+   TABLET
 ========================= */
 
-footer {
-    padding: 25px;
-    text-align: center;
-    background: #222;
-    color: #aaa;
-    font-size: 14px;
+@media (max-width: 1050px) {
+
+    .nav-menu a {
+        margin-left: 10px;
+        font-size: 13px;
+    }
+
+    .hero-text h1 {
+        font-size: 52px;
+    }
+
+    .hero-info {
+        width: 260px;
+    }
+
+    .popup-box.wide {
+        width: 90%;
+    }
 }
 
 
@@ -340,52 +510,78 @@ footer {
    MOBILE
 ========================= */
 
-@media (max-width: 900px) {
+@media (max-width: 750px) {
 
-    nav div {
+    html,
+    body {
+        overflow: hidden;
+    }
+
+    nav {
+        padding: 20px 25px;
+    }
+
+    nav h2 {
+        font-size: 17px;
+    }
+
+    .nav-menu {
         display: none;
     }
 
-    .hero {
+    .home {
         flex-direction: column;
+
         align-items: flex-start;
+
         justify-content: flex-end;
 
-        gap: 30px;
+        gap: 20px;
 
-        padding: 100px 25px 40px;
+        padding: 100px 25px 35px;
     }
 
-    .text h1 {
-        font-size: 48px;
-    }
-
-    .info {
+    .hero-text {
         width: 100%;
     }
 
-    .projects-container {
+    .hero-text h1 {
+        font-size: 42px;
+    }
+
+    .hero-info {
+        width: 100%;
+    }
+
+    .info-item {
+        padding: 10px 0;
+    }
+
+    .info-item p {
+        font-size: 12px;
+    }
+
+    .popup {
+        padding: 60px 15px 20px;
+    }
+
+    .popup-box {
+        width: 100%;
+
+        padding: 30px 22px;
+    }
+
+    .popup-box h2 {
+        font-size: 28px;
+    }
+
+    .grid-2,
+    .grid-3,
+    .activity-grid {
         grid-template-columns: 1fr;
     }
 
-    .skills-container,
-    .activities-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-@media (max-width: 500px) {
-
-    .text h1 {
-        font-size: 40px;
-    }
-
-    .section {
-        padding: 70px 25px;
-    }
-
-    .section-title h2 {
-        font-size: 30px;
+    .contact-buttons {
+        flex-direction: column;
     }
 }
