@@ -574,69 +574,138 @@ nav a:hover {
 }
 
 
-/* ==================================================
-   MOBILE
-================================================== */
-
+/* =========================
+   MOBILE / HP
+========================= */
 @media (max-width: 700px) {
 
+    body {
+        overflow: hidden;
+    }
+
+    /* NAVBAR */
+    nav {
+        position: absolute;
+        padding: 18px 20px;
+        align-items: flex-start;
+    }
+
     nav h2 {
+        font-size: 16px;
+        max-width: 150px;
+        line-height: 1.3;
+    }
+
+    .nav-menu {
         display: none;
     }
 
-    nav {
-        justify-content: center;
-    }
-
-    nav a {
-        margin-left: 8px;
-        font-size: 11px;
-    }
-
+    /* HOME */
     .home-page {
+        min-height: 100vh;
+        height: 100vh;
+        padding: 110px 25px 30px;
+        display: flex;
         flex-direction: column;
-
         align-items: flex-start;
-
-        justify-content: flex-end;
-
-        gap: 30px;
-
-        padding: 100px 25px 40px;
+        justify-content: center;
+        gap: 35px;
+        overflow: hidden;
     }
 
-    .text h1 {
-        font-size: 42px;
-    }
-
-    .info {
+    /* TEXT KIRI */
+    .hero-text {
         width: 100%;
+        max-width: 100%;
     }
 
+    .hero-text .welcome {
+        font-size: 13px;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+        line-height: 1.1;
+        margin-bottom: 18px;
+    }
+
+    .hero-text .description {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        max-width: 350px;
+    }
+
+    .hero-text .button {
+        font-size: 13px;
+        padding: 10px 16px;
+    }
+
+    /* BAGIAN KANAN */
+    .hero-info {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-info .info-item {
+        padding: 12px 0;
+    }
+
+    .hero-info .info-item span {
+        font-size: 12px;
+    }
+
+    .hero-info .info-item h3 {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .hero-info .info-item p {
+        font-size: 12px;
+        line-height: 1.4;
+        margin-top: 5px;
+    }
+
+    .hero-contact {
+        padding-top: 12px;
+    }
+
+    .hero-contact h3 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .hero-contact a {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    /* HALAMAN ABOUT, SKILLS, DLL */
     .content-page {
-        padding: 90px 20px 30px;
+        padding: 90px 20px 25px;
+        overflow-y: auto;
     }
 
     .content-box {
         width: 100%;
-
-        max-width: 100%;
-
-        padding: 28px 22px;
-
-        max-height: 82vh;
+        max-height: 85vh;
+        padding: 25px 20px;
+        overflow-y: auto;
     }
 
     .content-box h2 {
-        font-size: 26px;
+        font-size: 28px;
     }
 
     .two-column,
+    .three-column,
     .activity-grid {
         grid-template-columns: 1fr;
     }
 
-    .contact-links {
-        flex-direction: column;
+    .card {
+        padding: 15px;
     }
 }
