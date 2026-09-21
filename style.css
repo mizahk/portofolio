@@ -254,6 +254,16 @@ nav h2 {
     color: #ccc !important;
 }
 
+.organization-card {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 22px;
+    margin: 25px 0 15px;
+}
+
 
 /* GRID */
 .skills-grid,
