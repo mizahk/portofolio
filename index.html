@@ -4,102 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Miza | Personal Portfolio</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- =========================
-         NAVBAR
-    ========================== -->
-
+    <!-- NAVBAR -->
     <nav>
-
         <h2>Miza Hafizhzah Khoirunnisa</h2>
 
-        <!-- DESKTOP MENU -->
         <div class="nav-menu">
             <a href="#" onclick="showPage('home')">Home</a>
             <a href="#" onclick="showPage('about')">About</a>
             <a href="#" onclick="showPage('education')">Education</a>
             <a href="#" onclick="showPage('skills')">Skills</a>
-            <a href="#" onclick="showPage('projects')">Projects</a>
             <a href="#" onclick="showPage('activities')">Activities</a>
             <a href="#" onclick="showPage('contact')">Contact</a>
         </div>
 
-        <!-- MOBILE MENU BUTTON -->
         <button class="menu-button" onclick="openMenu()">☰</button>
-
     </nav>
+
+    <!-- MOBILE MENU -->
     <div id="mobileMenu" class="mobile-menu">
+        <button class="close-menu" onclick="closeMenu()">×</button>
 
-    <button class="close-menu" onclick="closeMenu()">×</button>
-
-    <a href="#" onclick="showPage('home')">Home</a>
-    <a href="#" onclick="showPage('about')">About</a>
-    <a href="#" onclick="showPage('education')">Education</a>
-    <a href="#" onclick="showPage('skills')">Skills</a>
-    <a href="#" onclick="showPage('projects')">Projects</a>
-    <a href="#" onclick="showPage('activities')">Activities</a>
-    <a href="#" onclick="showPage('contact')">Contact</a>
-
-</div>
-
-
-    <!-- =========================
-         MOBILE MENU
-    ========================== -->
-
-    <div id="mobileMenu" class="mobile-menu">
-
-        <button class="menu-close" onclick="closeMenu()">×</button>
-
-        <a href="#" onclick="showPage('home'); closeMenu();">
-            Home
-        </a>
-
-        <a href="#" onclick="showPage('about'); closeMenu();">
-            About
-        </a>
-
-        <a href="#" onclick="showPage('education'); closeMenu();">
-            Education
-        </a>
-
-        <a href="#" onclick="showPage('skills'); closeMenu();">
-            Skills
-        </a>
-
-        <a href="#" onclick="showPage('projects'); closeMenu();">
-            Projects
-        </a>
-
-        <a href="#" onclick="showPage('activities'); closeMenu();">
-            Activities
-        </a>
-
-        <a href="#" onclick="showPage('contact'); closeMenu();">
-            Contact
-        </a>
-
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('about')">About</a>
+        <a href="#" onclick="showPage('education')">Education</a>
+        <a href="#" onclick="showPage('skills')">Skills</a>
+        <a href="#" onclick="showPage('activities')">Activities</a>
+        <a href="#" onclick="showPage('contact')">Contact</a>
     </div>
 
-
-    <!-- =========================
-         HOME
-    ========================== -->
-
+    <!-- HOME -->
     <section id="home" class="page active home-page">
 
         <div class="hero-text">
-
-            <p class="welcome">
-                SELAMAT DATANG
-            </p>
+            <p class="welcome">SELAMAT DATANG</p>
 
             <h1>
                 Saya Miza,<br>
@@ -114,44 +57,29 @@
             <button onclick="showPage('about')" class="button">
                 Discover More →
             </button>
-
         </div>
-
-
-        <!-- BAGIAN KANAN DESKTOP -->
 
         <div class="hero-info">
 
             <div class="info-item">
-
                 <span>01</span>
-
                 <h3>Tentang Saya</h3>
-
                 <p>
                     Mahasiswa Matematika di Universitas Airlangga
                     yang tertarik pada pengolahan data dan teknologi.
                 </p>
-
             </div>
 
-
             <div class="info-item">
-
                 <span>02</span>
-
                 <h3>Kemampuan</h3>
-
                 <p>
                     Microsoft Office, Google Workspace,
                     pengolahan data, dan analisis data dasar.
                 </p>
-
             </div>
 
-
             <div class="hero-contact">
-
                 <h3>Let's Connect</h3>
 
                 <a href="mailto:mizahafizhzahkhoirunnisaa@gmail.com">
@@ -166,25 +94,18 @@
                    target="_blank">
                     LinkedIn
                 </a>
-
             </div>
 
         </div>
 
     </section>
 
-
-    <!-- =========================
-         ABOUT
-    ========================== -->
-
+    <!-- ABOUT -->
     <section id="about" class="page content-page">
 
         <div class="content-box">
 
-            <button class="close" onclick="showPage('home')">
-                ×
-            </button>
+            <button class="close" onclick="showPage('home')">×</button>
 
             <span class="number">01</span>
 
@@ -213,18 +134,12 @@
 
     </section>
 
-
-    <!-- =========================
-         EDUCATION
-    ========================== -->
-
+    <!-- EDUCATION -->
     <section id="education" class="page content-page">
 
         <div class="content-box">
 
-            <button class="close" onclick="showPage('home')">
-                ×
-            </button>
+            <button class="close" onclick="showPage('home')">×</button>
 
             <span class="number">02</span>
 
@@ -232,16 +147,14 @@
 
             <div class="card">
 
-                <h3>
-                    Universitas Airlangga
-                </h3>
+                <h3>Universitas Airlangga</h3>
 
                 <p class="pink">
                     S1 Matematika
                 </p>
 
                 <p>
-                    2025 – Sekarang
+                    2024 – Sekarang
                 </p>
 
                 <p class="muted">
@@ -256,71 +169,45 @@
 
     </section>
 
-
-    <!-- =========================
-         SKILLS
-    ========================== -->
-
+    <!-- SKILLS -->
     <section id="skills" class="page content-page">
 
         <div class="content-box">
 
-            <button class="close" onclick="showPage('home')">
-                ×
-            </button>
+            <button class="close" onclick="showPage('home')">×</button>
 
             <span class="number">03</span>
 
             <h2>Kemampuan</h2>
 
-
             <div class="two-column">
 
                 <div class="card">
 
-                    <h3>
-                        Hard Skills
-                    </h3>
+                    <h3>Hard Skills</h3>
 
                     <ul>
-
                         <li>Microsoft Excel — Basic</li>
-
                         <li>Google Sheets — Basic</li>
-
                         <li>Microsoft Word</li>
-
                         <li>Microsoft PowerPoint</li>
-
                         <li>Google Docs</li>
-
                         <li>Pengolahan Data — Basic</li>
-
                         <li>Analisis Data — Basic</li>
-
                     </ul>
 
                 </div>
 
-
                 <div class="card">
 
-                    <h3>
-                        Soft Skills
-                    </h3>
+                    <h3>Soft Skills</h3>
 
                     <ul>
-
                         <li>Communication</li>
-
                         <li>Teamwork</li>
-
                         <li>Discipline</li>
-
                         <li>Responsibility</li>
-
                         <li>Time Management</li>
-
                     </ul>
 
                 </div>
@@ -331,104 +218,22 @@
 
     </section>
 
-
-    <!-- =========================
-         PROJECTS
-    ========================== -->
-
-    <section id="projects" class="page content-page">
-
-        <div class="content-box wide">
-
-            <button class="close" onclick="showPage('home')">
-                ×
-            </button>
-
-            <span class="number">04</span>
-
-            <h2>Academic Projects</h2>
-
-
-            <div class="three-column">
-
-                <div class="card">
-
-                    <h3>
-                        Critical Path Method
-                    </h3>
-
-                    <p class="pink">
-                        HIMATIKA's Balance 2025
-                    </p>
-
-                    <p class="muted">
-                        Membuat program menggunakan Borland C++
-                        untuk menganalisis aktivitas proyek
-                        menggunakan metode CPM.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        Metode Numerik
-                    </h3>
-
-                    <p class="muted">
-                        Mengerjakan permasalahan matematika
-                        menggunakan metode numerik, termasuk
-                        metode Runge-Kutta.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        Statistika & Analisis Data
-                    </h3>
-
-                    <p class="muted">
-                        Mengerjakan tugas perkuliahan yang berkaitan
-                        dengan pengolahan dan analisis data.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         ACTIVITIES
-    ========================== -->
-
+    <!-- ACTIVITIES -->
     <section id="activities" class="page content-page">
 
         <div class="content-box wide">
 
-            <button class="close" onclick="showPage('home')">
-                ×
-            </button>
+            <button class="close" onclick="showPage('home')">×</button>
 
-            <span class="number">05</span>
+            <span class="number">04</span>
 
             <h2>Organization & Activities</h2>
-
 
             <div class="activity-grid">
 
                 <div class="card">
 
-                    <h3>
-                        KOMBAT – HIMATIKA
-                    </h3>
+                    <h3>KOMBAT – HIMATIKA</h3>
 
                     <p class="pink">
                         Anggota Divisi Humas · Mar 2026 – Sekarang
@@ -441,12 +246,9 @@
 
                 </div>
 
-
                 <div class="card">
 
-                    <h3>
-                        HIMATIKA's BALANCE
-                    </h3>
+                    <h3>HIMATIKA's BALANCE</h3>
 
                     <p class="pink">
                         Anggota Divisi KAMJINKES
@@ -459,12 +261,9 @@
 
                 </div>
 
-
                 <div class="card">
 
-                    <h3>
-                        GATHERING MABA
-                    </h3>
+                    <h3>GATHERING MABA</h3>
 
                     <p class="pink">
                         Anggota Divisi Acara
@@ -477,12 +276,9 @@
 
                 </div>
 
-
                 <div class="card">
 
-                    <h3>
-                        PENDEKAR FST
-                    </h3>
+                    <h3>PENDEKAR FST</h3>
 
                     <p class="pink">
                         Pendamping Kelompok
@@ -495,12 +291,9 @@
 
                 </div>
 
-
                 <div class="card">
 
-                    <h3>
-                        PASKIBRA
-                    </h3>
+                    <h3>PASKIBRA</h3>
 
                     <p class="pink">
                         Ton 1 · Jul 2025 – Aug 2025
@@ -520,27 +313,20 @@
 
     </section>
 
-
-    <!-- =========================
-         CONTACT
-    ========================== -->
-
+    <!-- CONTACT -->
     <section id="contact" class="page content-page">
 
         <div class="content-box contact-box">
 
-            <button class="close" onclick="showPage('home')">
-                ×
-            </button>
+            <button class="close" onclick="showPage('home')">×</button>
 
-            <span class="number">06</span>
+            <span class="number">05</span>
 
             <h2>Let's Connect</h2>
 
             <p class="muted">
                 Feel free to connect with me.
             </p>
-
 
             <div class="contact-links">
 
@@ -562,7 +348,6 @@
         </div>
 
     </section>
-
 
     <script src="script.js"></script>
 

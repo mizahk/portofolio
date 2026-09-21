@@ -1,40 +1,13 @@
-function showPage(pageName) {
-
-    const pages = document.querySelectorAll(".page");
-
-    pages.forEach(function(page) {
-        page.classList.remove("active");
-    });
-
-    const selectedPage = document.getElementById(pageName);
-
-    if (selectedPage) {
-        selectedPage.classList.add("active");
-    }
-
+function showPage(page) {
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.getElementById(page).classList.add("active");
     closeMenu();
 }
 
-
-/* =========================
-   OPEN MOBILE MENU
-========================= */
-
 function openMenu() {
-
-    const menu = document.getElementById("mobileMenu");
-
-    menu.classList.add("show");
+    document.getElementById("mobileMenu").classList.add("show");
 }
 
-
-/* =========================
-   CLOSE MOBILE MENU
-========================= */
-
 function closeMenu() {
-
-    const menu = document.getElementById("mobileMenu");
-
-    menu.classList.remove("show");
+    document.getElementById("mobileMenu").classList.remove("show");
 }
