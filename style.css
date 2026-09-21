@@ -15,16 +15,16 @@ body {
     overflow: hidden;
 }
 
+
 /* NAVBAR */
 nav {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     padding: 25px 7%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     z-index: 100;
 }
 
@@ -55,23 +55,23 @@ nav h2 {
     color: #ff9fba;
 }
 
-/* MOBILE BUTTON */
 .menu-button {
     display: none;
     background: none;
-    border: none;
+    border: 0;
     color: white;
     font-size: 28px;
     cursor: pointer;
 }
 
+
 /* PAGE */
 .page {
     position: fixed;
     inset: 0;
+    display: none;
     width: 100%;
     height: 100vh;
-    display: none;
     z-index: 1;
 }
 
@@ -79,13 +79,12 @@ nav h2 {
     display: flex;
 }
 
+
 /* HOME */
 .home-page {
     background:
         linear-gradient(rgba(10,20,35,.45), rgba(10,20,35,.55)),
-        url("foto-miza.jpeg");
-    background-size: cover;
-    background-position: center 60%;
+        url("foto-miza.jpeg") center 60% / cover no-repeat;
     align-items: center;
     justify-content: space-between;
     padding: 100px 7%;
@@ -102,33 +101,17 @@ nav h2 {
 }
 
 .hero-text h1 {
-    font-size: 65px;
+    font-size: 50px;
     line-height: 1.08;
     margin-bottom: 22px;
 }
 
 .description {
+    color: #eee;
     font-size: 15px;
     line-height: 1.6;
-    color: #eee;
-    margin-bottom: 25px;
 }
 
-.button {
-    padding: 12px 20px;
-    color: white;
-    background: transparent;
-    border: 1px solid white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.button:hover {
-    background: white;
-    color: #071a2f;
-}
-
-/* HOME RIGHT */
 .hero-info {
     width: 280px;
 }
@@ -146,10 +129,6 @@ nav h2 {
 .number {
     color: #9ec0ff;
     font-weight: bold;
-}
-
-.info-item span {
-    font-size: 14px;
 }
 
 .info-item h3 {
@@ -178,16 +157,13 @@ nav h2 {
     display: block;
     color: #ff9fba;
     text-decoration: none;
+    margin-bottom: 8px;
 }
 
-.hero-contact a {
-    font-size: 13px;
-    margin-bottom: 7px;
-}
 
-/* CONTENT PAGES */
+/* CONTENT */
 .content-page {
-    background: url("foto-miza.jpeg") center/cover no-repeat;
+    background: url("foto-miza.jpeg") center / cover no-repeat;
     align-items: center;
     justify-content: center;
     padding: 100px 7%;
@@ -213,19 +189,19 @@ nav h2 {
     top: 18px;
     right: 25px;
     background: none;
-    border: none;
+    border: 0;
     color: white;
     font-size: 30px;
     cursor: pointer;
 }
 
-.close:hover {
+.close:hover,
+.close-menu:hover {
     color: #ff9fba;
 }
 
 .number {
     display: block;
-    font-size: 14px;
     margin-bottom: 8px;
 }
 
@@ -241,7 +217,8 @@ nav h2 {
     margin-bottom: 15px;
 }
 
-/* CARDS */
+
+/* CARD */
 .card {
     padding: 20px;
     border: 1px solid rgba(255,255,255,.2);
@@ -259,22 +236,6 @@ nav h2 {
     line-height: 1.5;
 }
 
-.pink {
-    color: #ff9fba !important;
-}
-
-.muted {
-    color: #ccc !important;
-}
-
-/* SKILLS */
-.two-column,
-.activity-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
 .card ul {
     list-style: none;
 }
@@ -285,10 +246,23 @@ nav h2 {
     border-bottom: 1px solid rgba(255,255,255,.12);
 }
 
-/* ACTIVITIES */
+.pink {
+    color: #ff9fba !important;
+}
+
+.muted {
+    color: #ccc !important;
+}
+
+
+/* GRID */
+.skills-grid,
 .activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+
 
 /* CONTACT */
 .contact-box {
@@ -299,17 +273,14 @@ nav h2 {
     margin-top: 25px;
 }
 
-.contact-links a {
-    font-size: 15px;
-    margin-bottom: 12px;
-}
 
 /* MOBILE MENU */
 .mobile-menu {
     display: none;
 }
 
-/* MOBILE */
+
+/* TABLET */
 @media (max-width: 900px) {
     .hero-text h1 {
         font-size: 52px;
@@ -320,6 +291,8 @@ nav h2 {
     }
 }
 
+
+/* MOBILE */
 @media (max-width: 700px) {
 
     nav {
@@ -340,7 +313,6 @@ nav h2 {
         display: block;
     }
 
-    /* MOBILE MENU */
     .mobile-menu {
         position: fixed;
         inset: 0;
@@ -366,13 +338,14 @@ nav h2 {
         top: 20px;
         right: 25px;
         background: none;
-        border: none;
+        border: 0;
         color: white;
         font-size: 35px;
         cursor: pointer;
     }
 
-    /* HOME */
+
+    /* HOME MOBILE */
     .home-page {
         padding: 100px 25px 30px;
         align-items: flex-start;
@@ -381,7 +354,6 @@ nav h2 {
 
     .hero-text {
         width: 100%;
-        max-width: 100%;
     }
 
     .welcome {
@@ -398,19 +370,14 @@ nav h2 {
 
     .description {
         font-size: 14px;
-        margin-bottom: 20px;
-    }
-
-    .button {
-        font-size: 13px;
-        padding: 11px 17px;
     }
 
     .hero-info {
         display: none;
     }
 
-    /* CONTENT */
+
+    /* CONTENT MOBILE */
     .content-page {
         padding: 80px 18px 25px;
     }
@@ -436,11 +403,11 @@ nav h2 {
         font-size: 28px;
     }
 
-    .two-column,
-    .activity-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
+    .skills-grid,
+.activity-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
 
     .card {
         padding: 15px;
